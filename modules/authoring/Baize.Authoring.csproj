@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Baize.Authoring</RootNamespace>
+    <AssemblyName>Baize.Authoring</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- 刻意的单向依赖：Authoring（W1）→ Ecs（W2 底座），Ecs 不反向引用 Authoring。
+         W1 核心数据模型零依赖；仅 RuntimeSceneSpawner（W2 消费端辅助）用到。 -->
+    <ProjectReference Include="..\ecs\Baize.Ecs.csproj" />
+  </ItemGroup>
+</Project>

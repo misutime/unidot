@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AuthoringPoc</RootNamespace>
+    <AssemblyName>authoring-poc</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\modules\authoring\Baize.Authoring.csproj" />
+    <ProjectReference Include="..\shooter-gameplay\Shooter.Gameplay.csproj" />
+  </ItemGroup>
+</Project>
